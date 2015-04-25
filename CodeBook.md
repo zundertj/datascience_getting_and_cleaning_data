@@ -2,23 +2,24 @@
 
 Data input is the "Human Activity Recognition Using Smartphones Dataset" as provided. 
 
-## Data processing
-The input data set is split in two separate sets, a "training" and a "test" set. 
-These two are first merged.
-The input data sets contain measurements of subjects performing certain activities. 
-The same subject can perform the same activity multiple times.
-Every time, for each measure, a mean and standard deviation of that measure is reported.
-In the final data set, the average of the mean/standard deviation is reported per subject-activity combination.
-
 The data set contains 68 variables, of which the first two indicate the activity and the subject performing the activity.
 The remaining 66 variables report the averages belonging to this combination per mean/standard deviation of the measure.
 
-## Variables
-The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tacc and tgyro. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tbodyacc and tgravityacc) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+#Subject and Activity
 
-Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tbodyaccjerk and tbodygyrojerk). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tbodyaccmag, tgravityaccmag, tbodyaccjerkmag, tbodygyromag, tbodygyrojerkmag). 
+These variables identify the unique subject/activity pair the variables relate to:
 
-Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fbodyacc, fbodyaccjerk, fbodygyro, fbodyaccjerkmag, fbodygyromag, fbodygyrojerkmag. (Note the 'f' to indicate frequency domain signals). 
+subject: the integer subject ID.
+activity: the string activity name:
+* Walking
+* Walking Upstairs
+* Walking Downstairs
+* Sitting
+* Standing
+* Laying
+
+# Measurement variables
+All variables are means of the corresponding subject-activity combination. All values are floating point numbers.
 
 ## Variable list
 * tbodyaccmeanx

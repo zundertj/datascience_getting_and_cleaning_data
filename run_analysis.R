@@ -1,7 +1,7 @@
 #run_analysis.R
 
 ## settings
-data_folder <- file.path(getwd(), "UCI HAR Dataset")
+data_folder <- file.path(getwd())
 output_file <- file.path(getwd(), "solution.txt")
 
 ## step 1: read data

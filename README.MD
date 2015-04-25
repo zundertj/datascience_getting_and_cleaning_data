@@ -10,9 +10,12 @@ Both input folder and output file location can be changed on top of this script
 * README.md is this file
 
 ## Description of data processing
+It is assumed the original data is in the working directory.
 The input data set is situated in two separate sets, a "training" and a "test" set. 
 These two are first merged.
+The activity identifiers are translated from identifiers into human-readable names.
 Then the mean and standard deviation of each measure is extracted; other statistics are discarded.
 The input data sets contain measurements of subjects performing certain activities. 
 The same subject can perform the same activity multiple times.
 In the final data set, the average of the mean/standard deviation is reported per subject-activity combination.
+The final data set can be found in the solution.txt file, which can be read into R with read.table("solution.txt", header = TRUE)
